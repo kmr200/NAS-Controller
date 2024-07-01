@@ -1,0 +1,13 @@
+package nas.nascontroller;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class NasControllerApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
+}
