@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class FileService {
@@ -24,7 +25,7 @@ public class FileService {
             throw new RuntimeException("File is empty");
         } else {
             try (InputStream inputStream = file.getInputStream()) {
-                Files.copy(inputStream, rootPath.resolve(file.getOriginalFilename()));
+                Files.copy(inputStream, rootPath.resolve(Objects.requireNonNull(file.getOriginalFilename())));
             }
         }
     }

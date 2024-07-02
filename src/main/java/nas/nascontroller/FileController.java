@@ -46,7 +46,7 @@ public class FileController {
         try {
             List<String> fileNames = Stream.of(files)
                     .map(MultipartFile::getOriginalFilename)
-                    .collect(Collectors.toList());
+                    .toList();
 
             fileService.saveMultipleFiles(files);
 
