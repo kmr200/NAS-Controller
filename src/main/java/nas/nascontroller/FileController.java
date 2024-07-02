@@ -71,4 +71,9 @@ public class FileController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @GetMapping("/files/list")
+    public String listFiles() {
+        return fileService.getFiles();
+    }
 }

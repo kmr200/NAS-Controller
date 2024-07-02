@@ -13,7 +13,7 @@ import java.io.File;
 @RestController
 public class HomeController {
 
-    @GetMapping("/hello")
+    @GetMapping("/")
     public String home() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         return UserService.getData(authentication.getName());
